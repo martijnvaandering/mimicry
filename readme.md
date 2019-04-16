@@ -1,35 +1,38 @@
 
 # Mimicry
 
-<code>ˈmiməkrē<code>
+`ˈmiməkrē`
+	
 <i>the action or art of imitating someone or something, typically in order to entertain or ridicule.</i>
 Lovey small project made in an evening to create something useful.
 
 ## Embedded webserver for mocking/mimicing your data
 
 Can run in the commandline:
-<code>
-	dotnet mimicry.server.dll
-</code>
-or embedded in your unittests.
-<code>
-[Fact]
-public void E2ETestSmallOk()
-{
-    using (var server = new EmbeddedServer("/foo", "bar"))
-    {
-        using (var client = new WebClient())
-        {
-            var foo = client.DownloadString(server.BaseUrl + "/foo");
 
-            Assert.NotNull(foo);
-            Assert.Equal("bar", foo);
-        }
-    }
-}
-</code>
+`dotnet mimicry.server.dll`
+
+or embedded in your unittests.
+
+```
+	[Fact]
+	public void E2ETestSmallOk()
+	{
+    		using (var server = new EmbeddedServer("/foo", "bar"))
+    		{
+        		using (var client = new WebClient())
+        		{
+            			var foo = client.DownloadString(server.BaseUrl + "/foo");
+
+            			Assert.NotNull(foo);
+				Assert.Equal("bar", foo);
+        		}
+    		}
+	}
+```
 
 # Why
+
 Don't want to pay for online mocking services...
 
 ## Todo's
