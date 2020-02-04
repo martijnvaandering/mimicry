@@ -53,4 +53,4 @@ Don't want to pay for online mocking services...
 
 # Help
 
-Help is always welcome, make a pull request or [email me](mailto://martijn@vaandering.net)
+Help is always welcome, make a pull request or [email me](mailto:martijn@vaandering.net)
